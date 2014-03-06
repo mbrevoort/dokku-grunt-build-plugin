@@ -1,16 +1,16 @@
-# dokku-bower-grunt-build
+# dokku-grunt-build
 
-dokku-bower-grunt-build is a plugin for [dokku][dokku] that runs `bower install` and `grunt build` in a `post-release` hook.
+dokku-grunt-build is a plugin for [dokku][dokku] that runs `grunt build` in a `post-release` hook.
 This is mostly useful for single page apps that have an extra build step but you don't want to alter your buildpack.
 
 ## Installation
 
 On your dokku server:
 ```sh
-git clone https://github.com/thrashr888/dokku-bower-grunt-build-plugin.git /var/lib/dokku/plugins/dokku-bower-grunt-build
+git clone https://github.com/mbrevoort/dokku-grunt-build-plugin.git /var/lib/dokku/plugins/dokku-grunt-build
 ```
 
-All future deployments will run bower and grunt after a release.
+All future deployments will run grunt after a release.
 
 ## License
 
