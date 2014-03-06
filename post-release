@@ -1,12 +1,11 @@
 #!/bin/bash
 
 APP="$1"; IMAGE="app/$APP"
-echo "-----> Building Node app ..."
+echo "-----> Running Grunt Build ..."
 COMMAND=$(cat <<EOF
 cd "\$DOKKU_ROOT/\$APP" &&
 server/prepare_dist &&
-npm update &&
-grunt build
+./node_modules/.bin/grunt build
 EOF
 )
 
