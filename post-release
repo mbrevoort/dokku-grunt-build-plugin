@@ -6,8 +6,6 @@ COMMAND=$(cat <<EOF
 cd "\$DOKKU_ROOT/\$APP" &&
 server/prepare_dist &&
 npm update &&
-bower install &&
-bower update &&
 grunt build
 EOF
 )
