@@ -5,6 +5,7 @@ echo "-----> Running Grunt Build ..."
 COMMAND=$(cat <<EOF
 cd "\$DOKKU_ROOT/\$APP" &&
 server/prepare_dist &&
+npm install &&
 ./node_modules/.bin/grunt build
 EOF
 )
@@ -13,4 +14,4 @@ id=$(docker run -d $IMAGE /bin/bash -c "$COMMAND")
 docker attach $id
 test $(docker wait $id) -eq 0
 docker commit $id $IMAGE > /dev/null
-echo "-----> Built Node"
+echo "-----> Built Grunt"
